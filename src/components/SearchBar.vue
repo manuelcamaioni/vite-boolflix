@@ -35,6 +35,8 @@ export default {
                     // handle success
 
                     this.store.MoviesList = response.data.results;
+
+                    console.log(this.store.MoviesList);
                 })
                 .catch(function (error) {
                     // handle error

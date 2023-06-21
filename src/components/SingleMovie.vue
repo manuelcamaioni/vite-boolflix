@@ -12,7 +12,11 @@
                     <li>
                         Lingua:
                         <em>{{
-                            this.getUnicodeFlagIcon(movie.original_language)
+                            movie.original_language === "en"
+                                ? this.getUnicodeFlagIcon("US")
+                                : this.getUnicodeFlagIcon(
+                                      movie.original_language
+                                  )
                         }}</em>
                     </li>
                     <li>
