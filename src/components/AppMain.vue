@@ -1,6 +1,5 @@
 <template>
     <main>
-        <SearchBar :Movies="Movies" />
         <SingleMovie :Movies="Movies" />
     </main>
 </template>
@@ -9,7 +8,6 @@
 import SearchBar from "./SearchBar.vue";
 import SingleMovie from "./SingleMovie.vue";
 import { store } from "../store";
-import axios from "axios";
 
 export default {
     components: {
