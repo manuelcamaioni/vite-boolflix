@@ -18,7 +18,10 @@ export default {
     data() {
         return {
             search: "",
-            apiUrl: "https://api.themoviedb.org/3/search/movie?api_key=256550ff1fdca66f331fdd0d6cec4eef",
+            apiUrlMovies:
+                "https://api.themoviedb.org/3/search/movie?api_key=256550ff1fdca66f331fdd0d6cec4eef",
+            apiUrlSeries:
+                "https://api.themoviedb.org/3/search/tv?api_key=256550ff1fdca66f331fdd0d6cec4eef",
             Movies: [],
             store,
         };
@@ -26,7 +29,7 @@ export default {
     methods: {
         apiCall(searchArg) {
             axios
-                .get(this.apiUrl, {
+                .get(this.apiUrlMovies, {
                     params: {
                         query: searchArg,
                     },
@@ -35,8 +38,23 @@ export default {
                     // handle success
 
                     this.store.MoviesList = response.data.results;
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                });
 
-                    console.log(this.store.MoviesList);
+            axios
+                .get(this.apiUrlSeries, {
+                    params: {
+                        query: searchArg,
+                    },
+                })
+                .then((response) => {
+                    // handle success
+
+                    this.store.SeriesList = response.data.results;
+                    console.log(this.store.SeriesList);
                 })
                 .catch(function (error) {
                     // handle error
