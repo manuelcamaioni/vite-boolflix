@@ -12,11 +12,7 @@
                     <li>
                         Lingua:
                         <em>{{
-                            series.original_language === "en"
-                                ? this.getUnicodeFlagIcon("US")
-                                : this.getUnicodeFlagIcon(
-                                      series.original_language
-                                  )
+                            this.getUnicodeFlagIcon(series.origin_country[0])
                         }}</em>
                     </li>
                     <li>
