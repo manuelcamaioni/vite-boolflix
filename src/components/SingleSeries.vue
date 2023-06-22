@@ -1,35 +1,28 @@
 <template>
     <div>
-        <ol>
+        <ol class="d-flex">
             <li v-for="series in store.SeriesList">
-                <ul>
-                    <li><img :src="getImagePath(series.poster_path)" :alt="series.name + ' missing image'"></li>
-                    <li>
-                        Titolo: <em>{{ series.name }}</em>
-                    </li>
-                    <li>
-                        Titolo originale: <em>{{ series.original_name }}</em>
-                    </li>
-                    <li>
-                        Lingua:
-                        <em>{{
-                            this.getUnicodeFlagIcon(series.origin_country[0] === undefined ? "n/d" :
-                                series.origin_country[0]
-                            )
-                        }}</em>
-                    </li>
-                    <li>
-
-                        <ul class="d-flex ps-0">
-                            <li v-for="icon in  Math.round(series.vote_average / 2)">
+                <div class="media-list d-flex">
+                    <div class="thumbnail">
+                        <img :src="getImagePath(series.poster_path)" :alt="series.name + ' missing image'">
+                    </div>
+                    <!-- <div class="desc-box d-flex flex-column">
+                        <span>Titolo: <em>{{ series.name }}</em></span>
+                        <span>Titolo originale: <em>{{ series.original_name }}</em></span>
+                        <span>Lingua:
+                            <em>{{
+                                this.getUnicodeFlagIcon(series.origin_country[0] === undefined ? "n/d" :
+                                    series.origin_country[0]
+                                )
+                            }}</em></span>
+                        <div class="rating d-flex ps-0">
+                            <span v-for="icon in  Math.round(series.vote_average / 2)">
                                 <i class="bi bi-star-fill pe-2"></i>
-                            </li>
-                        </ul>
+                            </span>
+                        </div>
+                    </div> -->
+                </div>
 
-
-
-                    </li>
-                </ul>
             </li>
         </ol>
     </div>
@@ -54,7 +47,7 @@ export default {
     },
     methods: {
         getImagePath: function (imgPath) {
-            let baseUrl = "https://image.tmdb.org/t/p/w500";
+            let baseUrl = "https://image.tmdb.org/t/p/w200";
             baseUrl += imgPath;
             console.log(baseUrl);
             return baseUrl;
@@ -63,4 +56,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+li {
+    color: white;
+
+    .thumbnail {
+        border-radius: .3rem;
+        overflow: hidden;
+        height: 50vh;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+</style>

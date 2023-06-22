@@ -1,13 +1,10 @@
 <template>
-    <section>
+    <div class="d-flex align-items-center search-container">
         <input type="text" v-model="search" />
-        <button
-            type="submit"
-            @click="apiCall(this.search)"
-            class="btn btn-primary">
-            Cerca
+        <button type="submit" @click="apiCall(this.search)" class="btn btn-danger d-flex">
+            <i class="bi bi-search m-auto"></i>
         </button>
-    </section>
+    </div>
 </template>
 
 <script>
@@ -66,4 +63,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.search-container>* {
+    margin: 0 .5rem;
+}
+
+button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+
+    .bi {
+        line-height: 0;
+    }
+}
+</style>

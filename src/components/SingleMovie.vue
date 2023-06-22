@@ -22,9 +22,11 @@
                             )
                         }}</em>
                     </li>
-                    <li>
-                        Voto: <em>{{ Math.round(movie.vote_average / 2) }}</em>
-                    </li>
+                    <ul class="d-flex ps-0">
+                        <li v-for="icon in  Math.round(series.vote_average / 2)">
+                            <i class="bi bi-star-fill pe-2"></i>
+                        </li>
+                    </ul>
                 </ul>
             </li>
         </ol>
@@ -47,7 +49,7 @@ export default {
     },
     methods: {
         getImagePath: function (imgPath) {
-            let baseUrl = "https://image.tmdb.org/t/p/w500";
+            let baseUrl = "https://image.tmdb.org/t/p/w200";
             baseUrl += imgPath;
             console.log(baseUrl);
             return baseUrl;

@@ -1,5 +1,8 @@
 <template>
-    <header>
+    <header class="d-flex align-items-center justify-content-between px-2">
+        <div class="logo-container">
+            <img src="../assets/logo.png" alt="Logho di Boolflix">
+        </div>
         <SearchBar />
     </header>
 </template>
@@ -16,4 +19,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+    height: 60px;
+
+    .logo-container {
+        padding: .5rem 0;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+</style>
