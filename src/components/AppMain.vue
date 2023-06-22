@@ -1,9 +1,9 @@
 <template>
     <main>
-        <div>
+        <div class="px-2">
             <SingleMovie />
         </div>
-        <div>
+        <div class="px-2">
             <SingleSeries />
         </div>
 
@@ -17,7 +17,6 @@ import SingleSeries from "./SingleSeries.vue";
 
 export default {
     components: {
-
         SingleMovie,
         SingleSeries,
     },
