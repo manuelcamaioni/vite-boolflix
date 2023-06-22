@@ -23,7 +23,7 @@
                         }}</em>
                     </li>
                     <li>
-                        Voto: <em>{{ movie.vote_average }}</em>
+                        Voto: <em>{{ Math.round(movie.vote_average / 2) }}</em>
                     </li>
                 </ul>
             </li>

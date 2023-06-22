@@ -19,7 +19,15 @@
                         }}</em>
                     </li>
                     <li>
-                        Voto: <em>{{ series.vote_average }}</em>
+
+                        <ul class="d-flex ps-0">
+                            <li v-for="icon in  Math.round(series.vote_average / 2)">
+                                <i class="bi bi-star-fill pe-2"></i>
+                            </li>
+                        </ul>
+
+
+
                     </li>
                 </ul>
             </li>
@@ -29,16 +37,19 @@
 
 <script>
 import { store } from "../store";
+
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 export default {
     props: {
         Movies: Array,
     },
 
+
     data() {
         return {
             store,
             getUnicodeFlagIcon,
+
         };
     },
     methods: {
