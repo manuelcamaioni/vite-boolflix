@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex align-items-center search-container">
-        <input type="text" v-model="search" />
+        <input type="text" v-model="search" @keyup.enter="apiCall(this.search)" />
         <button type="submit" @click="apiCall(this.search)" class="btn btn-danger d-flex">
             <i class="bi bi-search m-auto"></i>
         </button>
@@ -35,6 +35,7 @@ export default {
                     // handle success
 
                     this.store.MoviesList = response.data.results;
+                    console.log(this.store.MoviesList);
                 })
                 .catch(function (error) {
                     // handle error

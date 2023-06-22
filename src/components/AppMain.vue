@@ -1,7 +1,11 @@
 <template>
     <main>
-        <SingleMovie />
-        <SingleSeries />
+        <div>
+            <SingleMovie />
+        </div>
+        <div>
+            <SingleSeries />
+        </div>
 
     </main>
 </template>
@@ -9,7 +13,7 @@
 <script>
 
 import SingleMovie from "./SingleMovie.vue";
-import SingleSeries from "./singleSeries.vue"
+import SingleSeries from "./SingleSeries.vue";
 
 export default {
     components: {
@@ -19,11 +23,9 @@ export default {
     },
     data() {
         return {
-            Movies: [],
         };
     },
-    methods: {},
-    created() { },
+
 };
 </script>
 
