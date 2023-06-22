@@ -1,19 +1,14 @@
 <template>
     <main>
-        <div class="px-2">
-            <SingleMovie />
-        </div>
-        <div class="px-2">
-            <SingleSeries />
-        </div>
-
+        <SingleMovie />
+        <SingleSeries />
     </main>
 </template>
 
 <script>
 
 import SingleMovie from "./SingleMovie.vue";
-import SingleSeries from "./SingleSeries.vue";
+import SingleSeries from "./SingleSeriess.vue";
 
 export default {
     components: {

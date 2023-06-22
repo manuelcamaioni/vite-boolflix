@@ -6,11 +6,6 @@ div#app{
     background-color: #1b1b1b;
 }
 
-ul, ol{
-    list-style-type: none;
- 
-}
-
 .bi-star-fill{
     color: rgb(224, 201, 95);
 }
@@ -22,21 +17,21 @@ main{
 h2{
     color:white;
 }
-ol{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
+
 div.container-media {
     color: white;
-    width: calc(100% / 4 - .5rem);
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: .5rem;
+    width: 100%;
 
 }
 
 div.media-list {
         position: relative;
-        width: 100%;
+        width: calc(100% / 5 - 1rem);
+        margin: 0 .5rem .5rem;
+
 }
 
 div.overlay {
@@ -49,6 +44,8 @@ div.overlay {
     top: 0;
     left: 0;
     color: white;
+    overflow: auto;
+    
 
 }
 
@@ -56,13 +53,18 @@ div.media-list:hover div.overlay {
     opacity: 1;
     background-color: rgba(0, 0, 0, .4);
     transition: background-color .5s;
+    scrollbar-width: none;
 }
+
 .thumbnail {
-    height: 300px;
     width: 100%;
 }
-.poster {
+.poster, .not-found-poster, .backdrop-poster {
         width: 100%;
         height: 100%;
         object-fit: cover;
+}
+
+.overview{
+    font-size: .7rem;
 }
