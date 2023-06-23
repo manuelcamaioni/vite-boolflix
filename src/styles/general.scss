@@ -1,8 +1,4 @@
-:root{
-    background-color: #1b1b1b;
-}
-
-div#app{
+:root, div#app{
     background-color: #1b1b1b;
 }
 
@@ -24,14 +20,12 @@ div.container-media {
     flex-wrap: wrap;
     margin-bottom: .5rem;
     width: 100%;
-
 }
 
 div.media-list {
         position: relative;
         width: calc(100% / 5 - 1rem);
         margin: 0 .5rem .5rem;
-
 }
 
 div.overlay {
@@ -45,8 +39,6 @@ div.overlay {
     left: 0;
     color: white;
     overflow: auto;
-    
-
 }
 
 div.media-list:hover div.overlay {
@@ -59,12 +51,17 @@ div.media-list:hover div.overlay {
 .thumbnail {
     width: 100%;
 }
-.poster, .not-found-poster, .backdrop-poster {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+.poster, .not-found-poster{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .overview{
     font-size: .7rem;
+}
+
+.desc-box{
+    padding-left: .2rem;
+    font-size: .9rem;
 }

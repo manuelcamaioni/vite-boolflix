@@ -10,10 +10,12 @@
 import SingleMovie from "./SingleMovie.vue";
 import SingleSeries from "./SingleSeriess.vue";
 
+
 export default {
     components: {
         SingleMovie,
         SingleSeries,
+
     },
     data() {
         return {

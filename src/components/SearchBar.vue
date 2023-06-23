@@ -19,7 +19,7 @@ export default {
                 "https://api.themoviedb.org/3/search/movie?api_key=256550ff1fdca66f331fdd0d6cec4eef",
             apiUrlSeries:
                 "https://api.themoviedb.org/3/search/tv?api_key=256550ff1fdca66f331fdd0d6cec4eef",
-            Movies: [],
+
             store,
         };
     },
