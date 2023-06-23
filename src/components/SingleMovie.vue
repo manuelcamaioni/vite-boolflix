@@ -16,10 +16,11 @@
                         <em>{{
                             this.getUnicodeFlagIcon(movie.original_language === "en" ? "gb" :
                                 movie.original_language) }}</em></span>
-                    <div class="rating d-flex ps-0">
+                    <div class="rating d-flex align-items-center ps-0">
                         <span v-for="icon in  starRating(movie.vote_average)">
                             <i class="bi bi-star-fill pe-2"></i>
                         </span>
+                        <span class="vote-count">{{ `(${movie.vote_count})` }}</span>
                     </div>
                     <span class="overview">{{ movie.overview }}</span>
                 </div>

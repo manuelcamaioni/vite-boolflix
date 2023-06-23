@@ -17,10 +17,11 @@
                                 series.origin_country[0]
                             )
                         }}</em></span>
-                    <div class="rating d-flex ps-0">
+                    <div class="rating d-flex align-items-center ps-0">
                         <span v-for="icon in starRating(series.vote_average)">
                             <i class="bi bi-star-fill pe-2"></i>
                         </span>
+                        <span class="vote-count">{{ `(${series.vote_count})` }}</span>
                     </div>
                     <span class="overview">{{ series.overview }}</span>
                 </div>
