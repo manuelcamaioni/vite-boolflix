@@ -1,4 +1,5 @@
 <template>
+    <h2 class="ps-2" v-show="store.SeriesList.length !== 0">TV Series</h2>
     <div class="container-media">
         <div v-for="series in store.SeriesList" class="media-list d-flex">
             <div class="thumbnail">

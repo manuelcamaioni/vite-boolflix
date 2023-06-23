@@ -1,4 +1,5 @@
 <template>
+    <h2 class="ps-2" v-show="store.MoviesList.length !== 0">Movies</h2>
     <div class="container-media">
         <div v-for="movie in store.MoviesList" class="media-list d-flex">
             <div class="thumbnail">
